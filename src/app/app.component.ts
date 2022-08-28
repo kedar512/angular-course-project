@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RECIPE_TAB_NAME } from './common/app-constants';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-first-app';
+  tabName: string = RECIPE_TAB_NAME;
+
+  onTabChange(tabName) {
+    this.tabName = tabName;
+  }
 }
